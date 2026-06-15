@@ -3,6 +3,10 @@
 import Link from "next/link";
 import { useAuth } from "@/context/AuthContext";
 import NotificationBell from "@/components/NotificationBell";
+import Image from "next/image";
+import logoImg from "@/images/Logo ITS Pinjam.png";
+import cartIcon from "@/images/shopping-cart.png";
+import dashboardIcon from "@/images/dashboard.png";
 
 export default function Navbar() {
   const { user, logout } = useAuth();
@@ -10,8 +14,8 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 z-40 border-b border-slate-200 bg-white">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
-        <Link href="/" className="text-xl font-bold text-[#1A3C6E]">
-          ITSPinjam
+        <Link href="/" className="flex items-center">
+          <Image src={logoImg} alt="ITS Pinjam" height={36} className="object-contain" />
         </Link>
 
         <div className="flex items-center gap-4 text-sm">
@@ -23,7 +27,7 @@ export default function Navbar() {
             <>
               {user.role === "peminjam" && (
                 <Link href="/cart" className="text-slate-600 hover:text-[#1A3C6E]">
-                  Keranjang
+                  <Image src={cartIcon} alt="Keranjang" width={22} height={22} className="object-contain" />
                 </Link>
               )}
               {user.role === "pemilik" && (
@@ -35,11 +39,9 @@ export default function Navbar() {
                 </Link>
               )}
               <NotificationBell />
-              <Link
-                href={user.role === "pemilik" ? "/dashboard/owner" : "/dashboard/borrower"}
-                className="text-slate-600 hover:text-[#1A3C6E]"
-              >
-                Dashboard
+              <Link href={user.role === "pemilik" ? "/dashboard/owner" : "/dashboard/borrower"}
+                className="text-slate-600 hover:text-[#1A3C6E]">
+                <Image src={dashboardIcon} alt="Dashboard" width={22} height={22} className="object-contain" />
               </Link>
               <span className="hidden text-slate-700 sm:inline">{user.name}</span>
               <button

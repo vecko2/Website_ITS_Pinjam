@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import api from "@/lib/api";
+import Image from "next/image";
+import notifIcon from "@/images/notification.png";
 
 export default function NotificationBell() {
   const [unread, setUnread] = useState(0);
@@ -22,7 +24,7 @@ export default function NotificationBell() {
 
   return (
     <Link href="/notifications" className="relative text-slate-600 hover:text-[#1A3C6E]">
-      Notifikasi
+      <Image src={notifIcon} alt="Notifikasi" width={22} height={22} className="object-contain" />
       {unread > 0 && (
         <span className="absolute -right-3 -top-2 flex h-4 min-w-[16px] items-center justify-center rounded-full bg-red-500 px-1 text-[10px] font-bold text-white">
           {unread}

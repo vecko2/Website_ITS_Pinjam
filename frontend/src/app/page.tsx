@@ -7,13 +7,19 @@ import { Category } from "@/types";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-// Ikon sederhana per kategori
-const categoryIcons: Record<string, string> = {
-  kendaraan: "🚲",
-  elektronik: "💻",
-  "rumah-tangga": "🏠",
-  "alat-teknik": "🔧",
-  lainnya: "📦",
+import Image from "next/image";
+import bicycleIcon from "@/images/bicycle.png";
+import laptopIcon from "@/images/laptop.png";
+import homeIcon from "@/images/home.png";
+import wrenchIcon from "@/images/wrench.png";
+import boxIcon from "@/images/box.png";
+
+const categoryIcons: Record<string, { src: any; alt: string }> = {
+  kendaraan:    { src: bicycleIcon, alt: "Kendaraan" },
+  elektronik:   { src: laptopIcon,  alt: "Elektronik" },
+  "rumah-tangga": { src: homeIcon,  alt: "Rumah Tangga" },
+  "alat-teknik": { src: wrenchIcon, alt: "Alat Teknik" },
+  lainnya:      { src: boxIcon,     alt: "Lainnya" },
 };
 
 export default function Home() {
@@ -67,7 +73,13 @@ export default function Home() {
               href={`/catalog?category=${cat.slug}`}
               className="flex flex-col items-center gap-2 rounded-xl border border-slate-200 bg-white p-6 transition hover:border-[#2E86AB] hover:shadow-sm"
             >
-              <span className="text-3xl">{categoryIcons[cat.slug] || "📦"}</span>
+              <Image
+                src={categoryIcons[cat.slug]?.src || boxIcon}
+                alt={categoryIcons[cat.slug]?.alt || cat.name}
+                width={40}
+                height={40}
+                className="object-contain"
+              />
               <span className="text-sm font-medium text-slate-700">{cat.name}</span>
             </Link>
           ))}
