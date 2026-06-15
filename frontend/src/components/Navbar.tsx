@@ -16,8 +16,8 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 z-40 border-b border-slate-200 bg-white">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
-        <Link href="/" className="flex items-center">
-          <Image src={logoImg} alt="ITS Pinjam" height={100} className="object-contain" />
+        <Link href="/" className="text-xl font-bold text-[#1A3C6E]">
+          ITSPinjam
         </Link>
 
         <div className="flex items-center gap-4 text-sm">
