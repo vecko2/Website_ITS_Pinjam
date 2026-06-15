@@ -23,7 +23,7 @@ export default function NotificationBell() {
   }, []);
 
   return (
-    <Link href="/notifications" className="relative text-slate-600 hover:text-[#1A3C6E]">
+    <Link href="/notifications" title="Notifikasi" className="relative text-slate-600 hover:text-[#1A3C6E]">
       <Image src={notifIcon} alt="Notifikasi" width={22} height={22} className="object-contain" />
       {unread > 0 && (
         <span className="absolute -right-3 -top-2 flex h-4 min-w-[16px] items-center justify-center rounded-full bg-red-500 px-1 text-[10px] font-bold text-white">
