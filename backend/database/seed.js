@@ -95,6 +95,109 @@ async function seed() {
         images: ["https://picsum.photos/seed/drill1/600/400"],
         status: "available",
       },
+            {
+        title: "Sewa Kamera Canon EOS M50",
+        name: "Canon EOS M50",
+        description: "Kamera mirrorless cocok untuk fotografi dan videografi. Sudah termasuk baterai dan charger.",
+        category: "elektronik",
+        prices: [75000, 450000, 1500000, null],
+        images: [
+          "https://picsum.photos/seed/camera1/600/400",
+          "https://picsum.photos/seed/camera2/600/400"
+        ],
+        status: "available",
+      },
+
+      {
+        title: "Sewa Laptop ASUS Vivobook",
+        name: "ASUS Vivobook 14",
+        description: "Laptop untuk coding, desain ringan, dan tugas kuliah. RAM 8GB SSD 512GB.",
+        category: "elektronik",
+        prices: [50000, 300000, 1000000, null],
+        images: [
+          "https://picsum.photos/seed/laptop1/600/400",
+          "https://picsum.photos/seed/laptop2/600/400"
+        ],
+        status: "available",
+      },
+
+      {
+        title: "Sewa Proyektor Epson",
+        name: "Proyektor Epson X05",
+        description: "Cocok untuk presentasi, seminar, dan nonton bareng.",
+        category: "elektronik",
+        prices: [60000, 350000, 1200000, null],
+        images: [
+          "https://picsum.photos/seed/projector1/600/400",
+          "https://picsum.photos/seed/projector2/600/400"
+        ],
+        status: "available",
+      },
+
+      {
+        title: "Sewa Tenda Camping 4 Orang",
+        name: "Tenda Eiger Dome 4P",
+        description: "Tenda kapasitas 4 orang, tahan hujan, cocok untuk camping.",
+        category: "peralatan",
+        prices: [40000, 250000, 800000, null],
+        images: [
+          "https://picsum.photos/seed/tent1/600/400",
+          "https://picsum.photos/seed/tent2/600/400"
+        ],
+        status: "available",
+      },
+
+      {
+        title: "Sewa Drone DJI Mini 3",
+        name: "DJI Mini 3",
+        description: "Drone ringan dengan kamera 4K untuk kebutuhan foto dan video udara.",
+        category: "elektronik",
+        prices: [150000, 900000, 3000000, null],
+        images: [
+          "https://picsum.photos/seed/drone1/600/400",
+          "https://picsum.photos/seed/drone2/600/400"
+        ],
+        status: "available",
+      },
+
+      {
+        title: "Sewa PlayStation 5",
+        name: "Sony PlayStation 5",
+        description: "PS5 lengkap dengan 2 stik dan beberapa game populer.",
+        category: "hiburan",
+        prices: [80000, 500000, 1800000, null],
+        images: [
+          "https://picsum.photos/seed/ps51/600/400",
+          "https://picsum.photos/seed/ps52/600/400"
+        ],
+        status: "available",
+      },
+
+      {
+        title: "Sewa Speaker Bluetooth JBL",
+        name: "JBL Charge 5",
+        description: "Speaker portable dengan suara jernih dan baterai tahan lama.",
+        category: "elektronik",
+        prices: [30000, 180000, 600000, null],
+        images: [
+          "https://picsum.photos/seed/speaker1/600/400",
+          "https://picsum.photos/seed/speaker2/600/400"
+        ],
+        status: "available",
+      },
+
+      {
+        title: "Sewa Meja Lipat Event",
+        name: "Meja Lipat Portable",
+        description: "Meja lipat untuk bazar, seminar, atau acara kampus.",
+        category: "furnitur",
+        prices: [20000, 120000, 400000, null],
+        images: [
+          "https://picsum.photos/seed/table1/600/400",
+          "https://picsum.photos/seed/table2/600/400"
+        ],
+        status: "available",
+      },
     ];
 
     for (const it of items) {
