@@ -7,6 +7,8 @@ import Image from "next/image";
 import logoImg from "@/images/Logo ITS Pinjam.png";
 import cartIcon from "@/images/shopping-cart.png";
 import dashboardIcon from "@/images/dashboard.png";
+import categoryIcon from "@/images/category.png";
+import transaksiIcon from "@/images/transaction.png";
 
 export default function Navbar() {
   const { user, logout } = useAuth();
@@ -15,12 +17,12 @@ export default function Navbar() {
     <nav className="sticky top-0 z-40 border-b border-slate-200 bg-white">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
         <Link href="/" className="flex items-center">
-          <Image src={logoImg} alt="ITS Pinjam" height={36} className="object-contain" />
+          <Image src={logoImg} alt="ITS Pinjam" height={48} className="object-contain" />
         </Link>
 
         <div className="flex items-center gap-4 text-sm">
           <Link href="/catalog" className="text-slate-600 hover:text-[#1A3C6E]">
-            Katalog
+            <Image src={categoryIcon} alt="Katalog" width={22} height={22} className="object-contain" />
           </Link>
 
           {user ? (
@@ -31,11 +33,8 @@ export default function Navbar() {
                 </Link>
               )}
               {user.role === "pemilik" && (
-                <Link
-                  href="/dashboard/owner/transactions"
-                  className="text-slate-600 hover:text-[#1A3C6E]"
-                >
-                  Transaksi
+                <Link href="/dashboard/owner/transactions" className="text-slate-600 hover:text-[#1A3C6E]">
+                  <Image src={transaksiIcon} alt="Transaksi" width={22} height={22} className="object-contain" />
                 </Link>
               )}
               <NotificationBell />
